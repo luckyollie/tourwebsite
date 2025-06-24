@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About SingaporeExplorer - Your Local Tour Guide</title>
+    <title data-i18n="about.hero.title">About SingaporeExplorer - Your Local Tour Guide</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,7 +11,14 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Singapore<span>Explorer</span></a>
+            <div class="nav-left">
+                <a href="index.html" class="logo">Singapore<span>Explorer</span></a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
             <div class="nav-toggle" id="navToggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -19,7 +26,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="singapore.html">Singapore</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -30,8 +37,8 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>About SingaporeExplorer</h1>
-            <p>Your trusted local guide to discovering the real Singapore</p>
+            <h1 data-i18n="about.hero.title">About SingaporeExplorer</h1>
+            <p data-i18n="about.hero.subtitle">Your trusted local guide to discovering the real Singapore</p>
         </div>
     </header>
 
@@ -43,9 +50,9 @@
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Singapore Cityscape">
                 </div>
                 <div class="about-content">
-                    <h2>Our Story</h2>
-                    <p>Founded in 2015 by a group of passionate Singaporeans, SingaporeExplorer was born from a desire to share our beautiful city with the world. We believe that the best way to experience Singapore is through the eyes of locals who truly love their home.</p>
-                    <p>Our team of expert guides are not just tour guides - they're storytellers, historians, and passionate ambassadors of Singapore culture. Each tour is crafted to showcase the authentic side of Singapore, from hidden gems to iconic landmarks.</p>
+                    <h2 data-i18n="about.story.title">Our Story</h2>
+                    <p data-i18n="about.story.text1">Founded in 2015 by a group of passionate Singaporeans, SingaporeExplorer was born from a desire to share our beautiful city with the world. We believe that the best way to experience Singapore is through the eyes of locals who truly love their home.</p>
+                    <p data-i18n="about.story.text2">Our team of expert guides are not just tour guides - they're storytellers, historians, and passionate ambassadors of Singapore culture. Each tour is crafted to showcase the authentic side of Singapore, from hidden gems to iconic landmarks.</p>
                     <a href="#" class="btn">Meet Our Team</a>
                 </div>
             </div>
@@ -55,27 +62,27 @@
     <!-- Mission & Values -->
     <section class="section mission-values">
         <div class="container">
-            <h2 class="section-title">Our Mission & Values</h2>
+            <h2 class="section-title" data-i18n="about.values.title">Our Mission & Values</h2>
             <div class="values-grid">
                 <div class="value-card">
                     <i class="fas fa-heart"></i>
-                    <h3>Passion</h3>
-                    <p>We're passionate about sharing Singapore's rich history and culture with visitors from around the world.</p>
+                    <h3 data-i18n="value.passion">Passion</h3>
+                    <p data-i18n="value.passion.text">We're passionate about sharing Singapore's rich history and culture with visitors from around the world.</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-handshake"></i>
-                    <h3>Authenticity</h3>
-                    <p>Our tours showcase the real Singapore - the hidden gems, local stories, and authentic experiences.</p>
+                    <h3 data-i18n="value.authenticity">Authenticity</h3>
+                    <p data-i18n="value.authenticity.text">Our tours showcase the real Singapore - the hidden gems, local stories, and authentic experiences.</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-users"></i>
-                    <h3>Community</h3>
-                    <p>We work closely with local communities to ensure sustainable tourism and authentic experiences.</p>
+                    <h3 data-i18n="value.community">Community</h3>
+                    <p data-i18n="value.community.text">We work closely with local communities to ensure sustainable tourism and authentic experiences.</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-star"></i>
-                    <h3>Excellence</h3>
-                    <p>We strive for excellence in every aspect of our tours, from planning to execution.</p>
+                    <h3 data-i18n="value.excellence">Excellence</h3>
+                    <p data-i18n="value.excellence.text">We strive for excellence in every aspect of our tours, from planning to execution.</p>
                 </div>
             </div>
         </div>
@@ -84,25 +91,25 @@
     <!-- Team Section -->
     <section class="section team">
         <div class="container">
-            <h2 class="section-title">Meet Our Team</h2>
+            <h2 class="section-title" data-i18n="team.title">Meet Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Tan">
-                    <h3>Sarah Tan</h3>
-                    <p>Chief Guide & Founder</p>
-                    <p>With over 15 years of experience, Sarah leads our team of expert guides.</p>
+                    <h3 data-i18n="team.member1.name">Sarah Tan</h3>
+                    <p data-i18n="team.member1.role">Chief Guide & Founder</p>
+                    <p data-i18n="team.member1.bio">With over 15 years of experience, Sarah leads our team of expert guides.</p>
                 </div>
                 <div class="team-member">
                     <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Mark Lim">
-                    <h3>Mark Lim</h3>
-                    <p>Food Tour Specialist</p>
-                    <p>Mark is our go-to expert for all things Singaporean cuisine.</p>
+                    <h3 data-i18n="team.member2.name">Mark Lim</h3>
+                    <p data-i18n="team.member2.role">Food Tour Specialist</p>
+                    <p data-i18n="team.member2.bio">Mark is our go-to expert for all things Singaporean cuisine.</p>
                 </div>
                 <div class="team-member">
                     <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="Lina Chen">
-                    <h3>Lina Chen</h3>
-                    <p>Cultural Historian</p>
-                    <p>Lina brings Singapore's rich history to life through her engaging tours.</p>
+                    <h3 data-i18n="team.member3.name">Lina Chen</h3>
+                    <p data-i18n="team.member3.role">Cultural Historian</p>
+                    <p data-i18n="team.member3.bio">Lina brings Singapore's rich history to life through her engaging tours.</p>
                 </div>
             </div>
         </div>
@@ -149,5 +156,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

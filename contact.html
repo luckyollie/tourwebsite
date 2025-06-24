@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contact.title">Contact Us - SingaporeExplorer</title>
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo" data-i18n="nav.logo">Singapore<span>Explorer</span></a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 data-i18n="contact.hero.title">Get In Touch</h1>
+            <p data-i18n="contact.hero.subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h2 data-i18n="contact.form.title">Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2 data-i18n="contact.info.title">Contact Information</h2>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 data-i18n="contact.info.address.title">Our Office</h3>
+                            <p data-i18n="contact.info.address">101 Beach Road, #01-01, Singapore 189703</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 data-i18n="contact.info.phone.title">Phone</h3>
+                            <p>+65 6123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 data-i18n="contact.info.email.title">Email</h3>
+                            <p>hello@singaporeexplorer.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 data-i18n="contact.info.hours.title">Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 2:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 data-i18n="contact.map.title">Find Us on the Map</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.798241336002!2d103.85646731533143!3d1.290499262090341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a5f4a333b5%3A0x4df7b3f2b7c7e9f8e!2s101%20Beach%20Rd%2C%20Singapore%20189703!5e0!3m2!1sen!2ssg!4v1624567890123!5m2!1sen!2ssg" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="SingaporeExplorer Office Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 data-i18n="contact.faq.title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        <span data-i18n="contact.faq.q1">What is your cancellation policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq1">
+                        <p data-i18n="contact.faq.a1">You can cancel your booking up to 48 hours before the tour for a full refund. Cancellations made within 48 hours are non-refundable.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        <span data-i18n="contact.faq.q2">Do you offer private tours?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq2">
+                        <p data-i18n="contact.faq.a2">Yes, we offer private tours for individuals and groups. Please contact us for more information and pricing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        <span data-i18n="contact.faq.q3">What should I bring on the tour?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq3">
+                        <p data-i18n="contact.faq.a3">We recommend bringing comfortable walking shoes, sunscreen, a hat, and a reusable water bottle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="contact.cta.title">Ready to Explore Singapore?</h2>
+                <p data-i18n="contact.cta.subtitle">Book your tour today and experience the best of Singapore with our expert guides.</p>
+                <a href="tours.html" class="btn btn-primary" data-i18n="contact.cta.button">View Tours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3 data-i18n="footer.about.title">About SingaporeExplorer</h3>
+                    <p data-i18n="footer.about.text">Discover the best of Singapore with our expert-led tours. We offer unique experiences that showcase the rich culture and history of this amazing city.</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.links.title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 data-i18n="footer.contact.title">Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +65 6123 4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@singaporeexplorer.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 SingaporeExplorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

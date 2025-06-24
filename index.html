@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singapore Tour Guide - Discover the Lion City</title>
+    <title data-i18n="hero.title">SingaporeExplorer - Discover Singapore Like a Local</title>
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,18 +11,25 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Singapore<span>Explorer</span></a>
+            <div class="nav-left">
+                <a href="index.html" class="logo" data-i18n="nav.logo">Singapore<span>Explorer</span></a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
             <div class="nav-toggle" id="navToggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="singapore.html">Singapore</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                <li><a href="singapore.html" data-i18n="nav.singapore">Singapore</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -30,16 +37,16 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Discover Singapore Like a Local</h1>
-            <p>Experience the best of Singapore with our expert tour guides</p>
-            <a href="tours.html" class="btn">Explore Tours</a>
+            <h1 data-i18n="hero.title">Discover the Best of Singapore</h1>
+            <p data-i18n="hero.subtitle">Experience the city like a local with our expert-guided tours</p>
+            <a href="tours.html" class="btn" data-i18n="nav.tours">Explore Tours</a>
         </div>
     </header>
 
     <!-- Featured Tours -->
     <section class="section featured-tours">
         <div class="container">
-            <h2 class="section-title">Popular Tours</h2>
+            <h2 class="section-title" data-i18n="tours.popular">Popular Tours</h2>
             <div class="tours-container">
                 <div class="tours-slider">
                     <button class="slider-arrow prev" aria-label="Previous tour">
@@ -50,11 +57,11 @@
                             <div class="tour-card scroll-reveal fade-up" data-delay="100">
                                 <img src="https://images.unsplash.com/photo-1538485399081-7c8978abbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="City Tour">
                                 <div class="tour-info">
-                                    <h3>City Highlights Tour</h3>
-                                    <p>Explore Singapore's iconic landmarks including Marina Bay Sands, Gardens by the Bay, and Chinatown.</p>
+                                    <h3 data-i18n="tours.city.title">City Highlights Tour</h3>
+                                    <p data-i18n="tours.city.desc">Explore Singapore's iconic landmarks and hidden gems</p>
                                     <div class="tour-meta">
-                                        <span class="duration">4 hours</span>
-                                        <span class="price">SGD 120</span>
+                                        <span class="duration" data-i18n="tours.city.duration">4 hours</span>
+                                        <span class="price" data-i18n="tours.city.price">SGD 120</span>
                                     </div>
                                     <a href="tours.html#city-tour" class="btn-small">Learn More</a>
                                 </div>
@@ -62,11 +69,11 @@
                             <div class="tour-card scroll-reveal fade-up" data-delay="200">
                                 <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80" alt="Food Tour">
                                 <div class="tour-info">
-                                    <h3>Food Adventure</h3>
-                                    <p>Taste your way through Singapore's diverse culinary scene with our foodie expert guides.</p>
+                                    <h3 data-i18n="tours.food.title">Food Adventure</h3>
+                                    <p data-i18n="tours.food.desc">Taste your way through Singapore's famous hawker centers</p>
                                     <div class="tour-meta">
-                                        <span class="duration">3 hours</span>
-                                        <span class="price">SGD 150</span>
+                                        <span class="duration" data-i18n="tours.food.duration">3 hours</span>
+                                        <span class="price" data-i18n="tours.food.price">SGD 90</span>
                                     </div>
                                     <a href="tours.html#food-tour" class="btn-small">Learn More</a>
                                 </div>
@@ -74,11 +81,11 @@
                             <div class="tour-card scroll-reveal fade-up" data-delay="300">
                                 <img src="https://images.unsplash.com/photo-1560964645-5296b5099679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Night Safari">
                                 <div class="tour-info">
-                                    <h3>Night Safari Experience</h3>
-                                    <p>Discover the nocturnal wildlife at the world's first night zoo with our expert guides.</p>
+                                    <h3 data-i18n="tours.nature.title">Nature & Gardens</h3>
+                                    <p data-i18n="tours.nature.desc">Immerse yourself in Singapore's beautiful green spaces</p>
                                     <div class="tour-meta">
-                                        <span class="duration">5 hours</span>
-                                        <span class="price">SGD 180</span>
+                                        <span class="duration" data-i18n="tours.nature.duration">5 hours</span>
+                                        <span class="price" data-i18n="tours.nature.price">SGD 150</span>
                                     </div>
                                     <a href="tours.html#night-safari" class="btn-small">Learn More</a>
                                 </div>
@@ -88,11 +95,11 @@
                             <div class="tour-card scroll-reveal fade-up" data-delay="400">
                                 <img src="https://images.unsplash.com/photo-1502720833882-0fec3748b62c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Heritage Tour">
                                 <div class="tour-info">
-                                    <h3>Heritage Walk</h3>
-                                    <p>Discover Singapore's rich history and cultural heritage through our guided heritage tour.</p>
+                                    <h3 data-i18n="tours.heritage.title">Heritage Walk</h3>
+                                    <p data-i18n="tours.heritage.desc">Discover the rich cultural heritage of Chinatown, Little India, and Kampong Glam</p>
                                     <div class="tour-meta">
-                                        <span class="duration">3.5 hours</span>
-                                        <span class="price">SGD 130</span>
+                                        <span class="duration" data-i18n="tours.heritage.duration">3.5 hours</span>
+                                        <span class="price" data-i18n="tours.heritage.price">SGD 100</span>
                                     </div>
                                     <a href="tours.html#heritage-tour" class="btn-small">Learn More</a>
                                 </div>
@@ -100,13 +107,13 @@
                             <div class="tour-card scroll-reveal fade-up" data-delay="500">
                                 <img src="https://images.unsplash.com/photo-1515404384627-9021a767a841?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nature Tour">
                                 <div class="tour-info">
-                                    <h3>Nature Escape</h3>
-                                    <p>Explore Singapore's lush nature reserves and hidden green spaces with our expert guides.</p>
-                                    <div class="tour-meta">
-                                        <span class="duration">4 hours</span>
-                                        <span class="price">SGD 140</span>
+                                    <div class="testimonial-content">
+                                    <p data-i18n="testimonial.2.text">"The food tour was the highlight of our trip. We got to try so many delicious local dishes we wouldn't have known about otherwise."</p>
+                                    <div class="testimonial-author">
+                                        <h4 data-i18n="testimonial.2.author">David K.</h4>
+                                        <span data-i18n="testimonial.2.location">London, UK</span>
                                     </div>
-                                    <a href="tours.html#nature-tour" class="btn-small">Learn More</a>
+                                </div>    <a href="tours.html#nature-tour" class="btn-small">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -125,22 +132,28 @@
     <!-- Why Choose Us -->
     <section class="section why-us">
         <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="features">
-                <div class="feature scroll-reveal fade-up" data-delay="100">
-                    <i class="fas fa-award"></i>
-                    <h3>Local Experts</h3>
-                    <p>Our guides are Singapore natives with in-depth knowledge of the city's history and culture.</p>
+            <h2 class="section-title" data-i18n="why.title">Why Choose Us</h2>
+            <div class="features-container">
+                <div class="feature-card scroll-reveal fade-up" data-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 data-i18n="why.experts">Local Experts</h3>
+                    <p data-i18n="why.experts.desc">Our guides are Singaporeans who know every corner of the city</p>
                 </div>
-                <div class="feature scroll-reveal fade-up" data-delay="200">
-                    <i class="fas fa-smile"></i>
-                    <h3>Personalized Service</h3>
-                    <p>We tailor each tour to your interests, ensuring a unique and memorable experience.</p>
+                <div class="feature-card scroll-reveal fade-up" data-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-i18n="why.small">Small Groups</h3>
+                    <p data-i18n="why.small.desc">Enjoy personalized attention in our small group tours</p>
                 </div>
-                <div class="feature scroll-reveal fade-up" data-delay="300">
-                    <i class="fas fa-star"></i>
-                    <h3>5-Star Rated</h3>
-                    <p>Consistently rated 5 stars by our happy customers from around the world.</p>
+                <div class="feature-card scroll-reveal fade-up" data-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-i18n="why.flexible">Flexible Options</h3>
+                    <p data-i18n="why.flexible.desc">Customize your experience with our flexible tour options</p>
                 </div>
             </div>
         </div>
@@ -149,7 +162,7 @@
     <!-- Testimonials -->
     <section class="section testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Travelers Say</h2>
+            <h2 class="section-title" data-i18n="testimonials.title">What Our Travelers Say</h2>
             <div class="testimonials-container">
                 <div class="testimonials-slider" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
                     <button class="slider-arrow prev testimonial-arrow" aria-label="Previous testimonial" aria-controls="testimonials-slider-track">
@@ -163,16 +176,26 @@
                                 <div class="testimonial-rating">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="testimonial-text">"The best tour I've ever been on! Our guide was incredibly knowledgeable and showed us hidden gems we would have never found on our own."</p>
-                                <p class="testimonial-author">- Sarah J.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                                <div class="testimonial-content">
+                                    <p data-i18n="testimonial.1.text">"The best way to experience Singapore! Our guide was incredibly knowledgeable and showed us places we would never have found on our own."</p>
+                                    <div class="testimonial-author">
+                                        <h4 data-i18n="testimonial.1.author">Sarah J.</h4>
+                                        <span data-i18n="testimonial.1.location">New York, USA</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="testimonial scroll-reveal fade-up" data-delay="150">
                                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="testimonial-img">
                                 <div class="testimonial-rating">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="testimonial-text">"The food tour was absolutely amazing! We got to try so many local dishes and learned about the history behind them. Highly recommended!"</p>
+                                <div class="testimonial-content">
+                                    <p data-i18n="testimonial.3.text">"The food tour was absolutely amazing! We got to try so many local dishes and learned about the history behind them. Highly recommended!"</p>
+                                    <div class="testimonial-author">
+                                        <h4 data-i18n="testimonial.3.author">Michael T.</h4>
+                                        <span data-i18n="testimonial.3.location">London, UK</span>
+                                    </div>
+                                </div>
                                 <p class="testimonial-author">- Michael T.</p>
                                 <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
                             </div>
@@ -240,9 +263,9 @@
     <!-- Call to Action -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Explore Singapore?</h2>
-            <p>Book your personalized tour today and create unforgettable memories in the Lion City.</p>
-            <a href="contact.html" class="btn">Book Now</a>
+            <h2 data-i18n="cta.title">Ready to Explore Singapore?</h2>
+            <p data-i18n="cta.subtitle">Book your tour today and discover the real Singapore with us</p>
+            <a href="tours.html" class="btn btn-white" data-i18n="cta.button">Book Now</a>
         </div>
     </section>
 
@@ -251,41 +274,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <h3>SingaporeExplorer</h3>
-                    <p>Your trusted local guide to experiencing the best of Singapore's culture, food, and attractions.</p>
+                <h3 data-i18n="footer.about.title">Singapore<span>Explorer</span></h3>
+                <p data-i18n="footer.about">Your trusted local guide to experiencing the best of Singapore's culture, food, and attractions.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.links">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="tours.html">Tours</a></li>
-                        <li><a href="singapore.html">Singapore</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                        <li><a href="singapore.html" data-i18n="nav.singapore">Singapore</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Orchard Road, Singapore 238867</p>
-                    <p><i class="fas fa-phone"></i> +65 6123 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@singaporeexplorer.com</p>
+                    <h4 data-i18n="footer.contact">Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address">123 Orchard Road, Singapore 238867</span></p>
+                    <p><i class="fas fa-phone"></i> <span data-i18n="footer.phone">+65 6123 4567</span></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@singaporeexplorer.com" data-i18n="footer.email">info@singaporeexplorer.com</a></p>
                 </div>
                 <div class="footer-social">
-                    <h4>Follow Us</h4>
+                    <h4 data-i18n="footer.follow">Follow Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" data-i18n="footer.facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" data-i18n="footer.instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" data-i18n="footer.tripadvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" data-i18n="footer.youtube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 SingaporeExplorer. All rights reserved.</p>
+                <p class="copyright" data-i18n="footer.copyright">&copy; 2023 SingaporeExplorer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>
