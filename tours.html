@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages - Singapore Explorer</title>
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/language.js?v=1.1" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo" data-i18n="nav.logo">Singapore Explorer</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="tours.html" class="active" data-i18n="nav.tours">Tours</a></li>
+                <li><a href="singapore.html" data-i18n="nav.singapore">Singapore</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="tours-main">
+        <div class="tours-header">
+            <h1 data-i18n="tours.page.title">Our Tours</h1>
+            <p class="tours-subtitle" data-i18n="tours.page.subtitle">Explore Singapore with our curated selection of unique and immersive tours. Whether you're a foodie, culture buff, or adventure seeker, there's something for everyone!</p>
+        </div>
+        <div class="tours-grid">
+            <!-- Tour Card 1 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1538485399081-7c8978abbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="City Highlights Tour">
+                <div class="tour-card-body">
+                    <span class="tour-duration" data-i18n="tours.night.duration">4 hours</span>
+                    <h2 class="tour-title" data-i18n="tours.city.title">City Highlights Tour</h2>
+                    <p class="tour-desc" data-i18n="tours.city.desc">Experience Singapore's iconic landmarks including Marina Bay Sands, Gardens by the Bay, and Merlion Park. Perfect for first-time visitors!</p>
+                    <div class="tour-price" data-i18n="tours.city.price">from S$85</div>
+                </div>
+                <div class="tour-card-footer">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="tours.book">Book now</a>
+                </div>
+            </div>
+            <!-- Tour Card 2 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80" alt="Hawker Food Adventure">
+                <div class="tour-card-body">
+                    <span class="tour-duration" data-i18n="tours.food.duration">3 hours</span>
+                    <h2 class="tour-title" data-i18n="tours.food.title">Hawker Food Adventure</h2>
+                    <p class="tour-desc" data-i18n="tours.food.desc">Embark on a culinary journey through Singapore's famous hawker centers. Sample local favorites like Hainanese chicken rice, laksa, and chili crab.</p>
+                    <div class="tour-price" data-i18n="tours.food.price">from S$62</div>
+                </div>
+                <div class="tour-card-footer">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="tours.book">Book now</a>
+                </div>
+            </div>
+            <!-- Tour Card 3 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1560964645-5296b5099679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Night Safari Experience">
+                <div class="tour-card-body">
+                    <span class="tour-duration" data-i18n="tours.night.duration">4 hours</span>
+                    <h2 class="tour-title" data-i18n="tours.night.title">Night Safari Experience</h2>
+                    <p class="tour-desc" data-i18n="tours.night.desc">Explore the world's first nocturnal wildlife park. Enjoy a tram ride and see amazing animals in their natural habitats.</p>
+                    <div class="tour-price" data-i18n="tours.night.price">from S$63</div>
+                </div>
+                <div class="tour-card-footer">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="tours.book">Book now</a>
+                </div>
+            </div>
+            <!-- Tour Card 4 -->
+            <div class="tour-card">
+                <img src="https://images.unsplash.com/photo-1502720833882-0fec3748b62c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kampong Glam & Arab Street">
+                <div class="tour-card-body">
+                    <span class="tour-duration" data-i18n="tours.kampong.duration">3.5 hours</span>
+                    <h2 class="tour-title" data-i18n="tours.kampong.title">Kampong Glam & Arab Street</h2>
+                    <p class="tour-desc" data-i18n="tours.kampong.desc">Discover the vibrant Malay-Arab quarter, Sultan Mosque, and trendy boutiques. Includes a traditional kueh tasting.</p>
+                    <div class="tour-price" data-i18n="tours.kampong.price">from S$60</div>
+                </div>
+                <div class="tour-card-footer">
+                    <a href="contact.html" class="btn btn-primary" data-i18n="tours.book">Book now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Singapore<span>Explorer</span></h3>
+                    <p>Your trusted guide to experiencing the best of Singapore's culture, food, and attractions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone"></i> +65 6123 4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@singaporeexplorer.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Singapore Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -125,134 +125,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevArrow = document.querySelector('.tours-container .slider-arrow.prev');
     const nextArrow = document.querySelector('.tours-container .slider-arrow.next');
     
-    // Testimonials Slider
-    const testimonialsSlider = document.querySelector('.testimonials-slider');
-    const testimonialsTrack = document.querySelector('.testimonials-slider-track');
-    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-    const prevButton = document.querySelector('.testimonial-arrow.prev');
-    const nextButton = document.querySelector('.testimonial-arrow.next');
-
-    if (testimonialsTrack && testimonialSlides.length > 0) {
-        let currentSlide = 0;
-        let slidesToShow = 3; // Default for desktop
-        let isAnimating = false;
-
-        // Set up the slider
-        function setupTestimonialsSlider() {
-            // Update slides to show based on screen width
-            if (window.innerWidth < 768) {
-                slidesToShow = 1;
-            } else if (window.innerWidth < 992) {
-                slidesToShow = 1.5; // Show 1.5 cards at a time on tablet
-            } else {
-                slidesToShow = 1.8; // Show 1.8 cards at a time on desktop for partial visibility
-            }
-            
-            const slideCount = testimonialSlides.length;
-            const slideWidth = 100 / slidesToShow;
-            
-            // Set track width to fit all slides with proper spacing
-            const slideMargin = 20; // 10px on each side
-            const slideWidthWithMargin = `calc(${100 / slidesToShow}% - ${slideMargin}px)`;
-            
-            // Update slide styles
-            testimonialSlides.forEach((slide, index) => {
-                slide.style.flex = `0 0 ${slideWidthWithMargin}`;
-                slide.style.maxWidth = slideWidthWithMargin;
-                slide.style.margin = `0 ${slideMargin/2}px`;
-                slide.style.boxSizing = 'border-box';
-                slide.style.display = 'inline-flex';
-                slide.style.height = 'auto';
-            });
-            
-            // Set track width to accommodate all slides with margins
-            const totalWidth = (100 * slideCount / slidesToShow) + 
-                             (slideMargin * (slideCount - 1) / slidesToShow);
-            testimonialsTrack.style.width = `${totalWidth}%`;
-            
-            // Initial position
-            goToSlide(0);
-        }
-
-        // Go to specific slide
-        function goToSlide(slideIndex) {
-            if (isAnimating) return;
-            
-            const slideCount = testimonialSlides.length;
-            const maxSlide = Math.max(0, slideCount - slidesToShow);
-            
-            // Constrain slide index
-            currentSlide = Math.max(0, Math.min(slideIndex, maxSlide));
-            
-            // Calculate translateX value based on slide width and margins
-            const slideWidth = 100 / slidesToShow;
-            const slideMargin = 20; // 10px on each side
-            const slideWidthWithMargin = `calc(${100 / slidesToShow}% - ${slideMargin}px)`;
-            const translateX = -((currentSlide * 100) / slidesToShow) + 
-                             ((currentSlide * slideMargin) / slidesToShow);
-            
-            // Apply transform with smooth transition
-            isAnimating = true;
-            testimonialsTrack.style.transition = 'transform 0.5s ease';
-            testimonialsTrack.style.transform = `translateX(${translateX}%)`;
-            
-            // Update button states
-            updateButtonStates();
-            
-            // Update ARIA live region
-            updateAriaLiveRegion();
-            
-            // Reset animation flag after transition
-            setTimeout(() => {
-                isAnimating = false;
-            }, 500);
-        }
-
-        // Update navigation button states
-        function updateButtonStates() {
-            const slideCount = testimonialSlides.length;
-            const maxSlide = Math.max(0, slideCount - slidesToShow);
-            
-            if (prevButton) {
-                prevButton.disabled = currentSlide === 0;
-                prevButton.setAttribute('aria-disabled', currentSlide === 0);
-            }
-            
-            if (nextButton) {
-                nextButton.disabled = currentSlide >= maxSlide;
-                nextButton.setAttribute('aria-disabled', currentSlide >= maxSlide);
-            }
-        }
-
-        // Event listeners for navigation
-        if (prevButton) {
-            prevButton.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                    goToSlide(currentSlide - 1);
-                }
-            });
-        }
-
-        if (nextButton) {
-            nextButton.addEventListener('click', () => {
-                goToSlide(currentSlide + 1);
-            });
-        }
-
-        // Handle window resize
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                setupTestimonialsSlider();
-            }, 250);
-        });
-
-        // Initialize the slider
-        setupTestimonialsSlider();
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
         
-        // Recalculate on images load
-        window.addEventListener('load', setupTestimonialsSlider);
+        testimonialsTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDifference = touchStartX - touchEndX;
+            
+            if (swipeDifference > swipeThreshold) {
+                goToNextSlide();
+            } else if (swipeDifference < -swipeThreshold) {
+                goToPrevSlide();
+            }
+        }
+    }
     }
 
     // Navigation functions for testimonials
@@ -375,31 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
         
         // Update arrow visibility
-        if (prevArrow && nextArrow) {
-            prevArrow.style.display = currentSlide > 0 ? 'block' : 'none';
-            nextArrow.style.display = currentSlide < totalSlides - 1 ? 'block' : 'none';
-        }
-    };
-    
-    // Navigation functions for tours
-    const goToPrevSlide = () => {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateSliderPosition();
-        }
-    };
-    
-    const goToNextSlide = () => {
-        if (currentSlide < totalSlides - 1) {
-            currentSlide++;
-            updateSliderPosition();
-            
-            // Trigger scroll reveal for newly visible cards
-            const newCards = slides[currentSlide].querySelectorAll('.tour-card');
-            newCards.forEach((card, index) => {
-                if (!card.classList.contains('active')) {
-                    setTimeout(() => card.classList.add('active'), index * 100);
-                }
             });
         }
     };

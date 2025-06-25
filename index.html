@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="hero.title">SingaporeExplorer - Discover Singapore Like a Local</title>
+    <title>Singapore Explorer</title>
     <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/language.js?v=1.1" defer></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-left">
-                <a href="index.html" class="logo" data-i18n="nav.logo">Singapore<span>Explorer</span></a>
+                <a href="index.html" class="logo" data-i18n="nav.logo">Singapore Explorer</a>
                 <div class="language-selector">
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <span class="lang-divider">|</span>
@@ -159,93 +160,11 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title" data-i18n="testimonials.title">What Our Travelers Say</h2>
-            <div class="testimonials-container">
-                <div class="testimonials-slider" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
-                    <button class="slider-arrow prev testimonial-arrow" aria-label="Previous testimonial" aria-controls="testimonials-slider-track">
-                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous testimonial</span>
-                    </button>
-                    <div class="testimonials-slider-track" id="testimonials-slider-track" role="group" aria-live="polite">
-                        <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 2">
-                            <div class="testimonial scroll-reveal fade-up" data-delay="100">
-                                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <div class="testimonial-content">
-                                    <p data-i18n="testimonial.1.text">"The best way to experience Singapore! Our guide was incredibly knowledgeable and showed us places we would never have found on our own."</p>
-                                    <div class="testimonial-author">
-                                        <h4 data-i18n="testimonial.1.author">Sarah J.</h4>
-                                        <span data-i18n="testimonial.1.location">New York, USA</span>
+
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial scroll-reveal fade-up" data-delay="150">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <div class="testimonial-content">
-                                    <p data-i18n="testimonial.3.text">"The food tour was absolutely amazing! We got to try so many local dishes and learned about the history behind them. Highly recommended!"</p>
-                                    <div class="testimonial-author">
-                                        <h4 data-i18n="testimonial.3.author">Michael T.</h4>
-                                        <span data-i18n="testimonial.3.location">London, UK</span>
-                                    </div>
-                                </div>
-                                <p class="testimonial-author">- Michael T.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
-                            </div>
-                            <div class="testimonial scroll-reveal fade-up" data-delay="200">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Aisha K." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">"The night safari was the highlight of our trip! Seeing the animals up close was an unforgettable experience. The guides were very informative."</p>
-                                <p class="testimonial-author">- Aisha K.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
                             </div>
                         </div>
-                        <div class="testimonial-slide">
-                            <div class="testimonial scroll-reveal fade-up" data-delay="250">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David L." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">"The heritage walk through Chinatown was fascinating. Our guide had so many interesting stories about Singapore's history. 5 stars!"</p>
-                                <p class="testimonial-author">- David L.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Sydney, Australia</p>
-                            </div>
-                            <div class="testimonial scroll-reveal fade-up" data-delay="300">
-                                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Maria G." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <p class="testimonial-text">"The Gardens by the Bay tour was breathtaking. Our guide's knowledge of the plants and architecture made the experience even more special."</p>
-                                <p class="testimonial-author">- Maria G.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Madrid, Spain</p>
-                            </div>
-                            <div class="testimonial scroll-reveal fade-up" data-delay="350">
-                                <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="James W." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">"The river cruise at sunset was the perfect way to see Singapore's skyline. The guide's commentary about the city's history was fascinating and engaging."</p>
-                                <p class="testimonial-author">- James W.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
-                            </div>
-                            <div class="testimonial scroll-reveal fade-up" data-delay="400">
-                                <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Emma R." class="testimonial-img">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">"The Marina Bay Sands experience was absolutely worth it! The infinity pool with the city view was breathtaking. A must-do in Singapore!"</p>
-                                <p class="testimonial-author">- Emma R.</p>
-                                <p class="testimonial-location"><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
-                            </div>
                         </div>
                     </div>
                     <button class="slider-arrow next testimonial-arrow" aria-label="Next testimonial" aria-controls="testimonials-slider-track">
@@ -310,6 +229,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/language.js"></script>
+
 </body>
 </html>
