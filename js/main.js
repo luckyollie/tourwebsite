@@ -1,4 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Vectorshift Chatbot FAB Logic ---
+    const vsFab = document.getElementById('vs-chatbot-fab');
+    const vsWidget = document.getElementById('vectorshift-chat-widget');
+    let chatOpen = false;
+
+    function openChat() {
+        if (vsWidget) {
+            vsWidget.style.display = 'block';
+            vsWidget.contentWindow?.postMessage?.('open', '*');
+            chatOpen = true;
+        }
+    }
+    function closeChat() {
+        if (vsWidget) {
+            vsWidget.style.display = 'none';
+            chatOpen = false;
+        }
+    }
+    // Hide widget by default
+    if (vsWidget) vsWidget.style.display = 'none';
+    // FAB click toggles chat
+    if (vsFab) {
+        vsFab.addEventListener('click', function() {
+            if (!chatOpen) {
+                openChat();
+            } else {
+                closeChat();
+            }
+        });
+        vsFab.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                vsFab.click();
+            }
+        });
+    }
+    // Optional: click outside widget to close (if widget is modal)
+    // window.addEventListener('click', function(e) {
+    //     if (chatOpen && vsWidget && !vsWidget.contains(e.target) && e.target !== vsFab) {
+    //         closeChat();
+    //     }
+    // });
+    // --- End Vectorshift Chatbot FAB Logic ---
+
+    //     if (chatOpen && vsWidget && !vsWidget.contains(e.target) && e.target !== vsFab) {
+    //         closeChat();
+    //     }
+    // });
+    // --- End Vectorshift Chatbot FAB Logic ---
+
     // Initialize scroll reveal
     const initScrollReveal = () => {
         const observerOptions = {
